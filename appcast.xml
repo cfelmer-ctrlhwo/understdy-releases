@@ -6,6 +6,46 @@
         <description>Latest updates for Understdy</description>
         <language>en</language>
         <item>
+            <title>Version 1.2.1</title>
+            <description><![CDATA[
+<h2>What's new in v1.2.1</h2>
+
+<ul>
+    <li><strong>Pause and resume capture during long external waits.</strong> When a file export, model generation, or other blocking task runs for minutes or hours while you're mid-SOP, click <strong>Pause</strong> in the menubar. Understdy stops recording whatever happens during the wait (idle, phone calls, work on other files) and records it instead as a single named step in the generated SOP — "Wait: Folio PDF export (47 minutes)". Click <strong>Resume</strong> when the wait ends.</li>
+    <li><strong>Inline label field on resume.</strong> The pause card prefills the wait label from the app you were in (e.g. "Folio export") so you can just confirm or edit, not type from scratch.</li>
+    <li><strong>Running pause timer in the menubar.</strong> While paused, the menubar header shows "PAUSED 12m 34s" so you always know how long you've been waiting — and that capture is intentionally paused, not broken.</li>
+</ul>
+
+<h2>Why</h2>
+
+Heather's beta feedback: triggering a PDF export in Folio can take anywhere from 5 minutes to an hour with no progress indicator. Without a way to pause, Understdy would either record an hour of idle activity or an hour of unrelated work — both pollute the SOP. Now that wait becomes one clean step.
+
+<h2>Fixes</h2>
+
+<ul>
+    <li><strong>Session manifests are forward-compatible.</strong> If a future Understdy version adds new event types, older installs now preserve those sessions instead of silently dropping them during decode.</li>
+    <li><strong>`.contextReduce` day bucket keyed off session time, not analysis time.</strong> A session captured at 11:45 PM that gets re-analyzed after midnight now attributes to the calendar day it actually happened on. Minor, but prevents a dismissal on "yesterday's" card from silently suppressing today's.</li>
+</ul>
+
+<h2>Coming soon</h2>
+
+<ul>
+    <li>Cycle-aware coaching ("you're oscillating Gmail↔Folio 5 times in 22 minutes") rolling out with v1.3.0's Phase 2 Coach update.</li>
+    <li>WIP-limit detection — flags when you have 12+ active client files with short dwell, which is the pattern most tied to cycle-time inflation.</li>
+</ul>
+            ]]></description>
+            <pubDate>Tue, 14 Apr 2026 17:32:40 +0000</pubDate>
+            <sparkle:version>1.2.1</sparkle:version>
+            <sparkle:shortVersionString>1.2.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.2.1/Understdy-Beta-v1.2.1.dmg"
+                sparkle:edSignature="aLPSh+VULC1oXQjpKvFlPanWr2SfZwwKm6MkZBulDkypqJIbIUM6AxEOPDIB/uMBY1xuGkM+jpFp3N6+b94fBg=="
+                length="4530055"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.2.0</title>
             <description><![CDATA[
 <h2>What's new in v1.2.0</h2>
