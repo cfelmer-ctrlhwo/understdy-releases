@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Understdy Updates</title>
+        <link>https://understdy.com</link>
+        <description>Latest updates for Understdy</description>
+        <language>en</language>
+        <!--
+            To publish a new version:
+            1. Build the DMG: swift build -c release
+            2. Sign it: .build/artifacts/sparkle/Sparkle/bin/sign_update YourApp.dmg
+            3. Update this file with the new version, URL, signature, and length
+            4. Upload the DMG somewhere accessible (GitHub Release, S3, etc.)
+            5. Commit and push this file
+        -->
+    </channel>
+</rss>
