@@ -6,6 +6,64 @@
         <description>Latest updates for Understdy</description>
         <language>en</language>
         <item>
+            <title>Version 1.3.0</title>
+            <description><![CDATA[
+<h2>What's new in v1.3.0</h2>
+
+<h3>Efficiency Coach — Phase 2 upgrades</h3>
+
+<ul>
+    <li><strong>Cycle-aware context-switching detection.</strong> When you're oscillating between two or three apps — the Gmail ↔ Folio loop, the Claude ↔ Codex back-and-forth — Coach now names the specific cycle instead of just "you're switching a lot." Example: <em>"You cycled Gmail ↔ Folio 5 times in 22 minutes. Complete the Gmail batch once before returning to Folio."</em> Low-rate oscillation (2–3 min per app) now triggers this; the old rate-only rule missed it.</li>
+    <li><strong>Work-in-progress detection.</strong> Flags when you're juggling 12+ active client files in a single hour with short focus per file — the pattern most tied to cycle-time inflation. "You had 16 active files in the 2–3pm hour, each averaging 2 min of focus. Finishing one client packet before starting the next can save ~20 min."</li>
+    <li><strong>Fragmented-calendar detection.</strong> When today's meetings leave no 90-minute block free OR create 4+ short gaps between meetings, Coach surfaces it and suggests consolidating. Aligned with the "deep work block available" suggestion — no more same-day contradictions where Coach said both "you have a focus block" and "your day is fragmented" for the same 75-minute gap.</li>
+    <li><strong>Responsiveness Mode.</strong> New toggle in Settings → Coaching for users whose role requires immediate response to clients or colleagues (like Transaction Coordinators). When on, generic "batch email" suggestions are suppressed. Coach still watches for repeated inbox re-checks — low-value vigilance that eats focus without producing responses — and can still flag those once per week. A footer note in the Coach window tells you when a suggestion was suppressed so silent behavior doesn't feel like the feature is broken.</li>
+    <li><strong>Inbox-vigilance detection recognizes Gmail in Chrome.</strong> Real-world workflows where webmail lives in the browser (app name = "Google Chrome", URL = mail.google.com) are now correctly identified as email activity. Both the generic batching suggestion and the qualified Responsiveness-Mode variant now catch browser-hosted email.</li>
+</ul>
+
+<h3>Dashboard + SOP workflow</h3>
+
+<ul>
+    <li><strong>Pause / Resume capture directly from the Dashboard toolbar.</strong> No more trip to the menu bar when a long export is running — click Pause from the Dashboard, the wait becomes a named step in the generated SOP when you resume.</li>
+    <li><strong>Mark for Review / Approve / Archive now click through correctly.</strong> Previously the button worked but the status didn't visibly change until you clicked away and back. State machine now refreshes the view on every transition.</li>
+    <li><strong>Rename an SOP in the main panel and the sidebar updates immediately.</strong> No more 3 different SOPs showing the same name in the left column while the header reflects the new title.</li>
+</ul>
+
+<h3>Settings</h3>
+
+<ul>
+    <li><strong>Section order re-worked</strong> so the things you actually touch (Onboarding Walkthrough, Check for Updates, Beta Feedback, Coaching toggles) are at the top. Set-and-forget fields (API key, hourly rate) moved near the bottom. About stays last.</li>
+    <li><strong>Version display shows the real version.</strong> Previously the About section hardcoded "1.0.0" even on v1.2.1 installs — now reads the live build number from the app bundle.</li>
+    <li><strong>Auto-Detect catches more tools.</strong> Ollama installed via the macOS app (not just Homebrew) is now picked up. ChatGPT.app presence marks OpenAI API as detected. Saving your Claude API key automatically re-runs Auto-Detect so Claude API flips to "Key configured" immediately.</li>
+</ul>
+
+<h3>Fixes</h3>
+
+<ul>
+    <li><strong>Grant Calendar Access now actually works after a prior denial.</strong> If you previously clicked "Don't Allow" on the calendar permission prompt, clicking Grant Access again used to do nothing (macOS won't re-prompt after denial). Understdy now deep-links straight to System Settings → Privacy → Calendars so you can toggle it on, and refreshes permission status immediately when you tab back.</li>
+    <li><strong>Session manifests are forward-compatible.</strong> A future Understdy version adding new event types won't silently drop your older sessions during decode.</li>
+    <li><strong>Detector-key bug</strong> where a context-switching suggestion captured at 11:45 PM could get attributed to the wrong calendar day after a midnight re-analysis. Fixed.</li>
+</ul>
+
+<h3>Coming soon (v1.4)</h3>
+
+<ul>
+    <li><strong>"Regenerate with my feedback" button</strong> on SOPs — your tags, notes, and "not part of SOP" / "out of order" annotations get fed into the next Claude pass instead of sitting there.</li>
+    <li><strong>"Run Now" button</strong> per deployed automation — Understdy already has the execution engine for Python / AppleScript / shell scripts; wiring it to a button in the Dashboard.</li>
+    <li><strong>Email integration</strong> design groundwork — account-level privacy controls, Apple Mail + Gmail (with a corporate-safe path that doesn't trigger Workspace admin audits).</li>
+</ul>
+            ]]></description>
+            <pubDate>Tue, 14 Apr 2026 20:52:47 +0000</pubDate>
+            <sparkle:version>1.3.0</sparkle:version>
+            <sparkle:shortVersionString>1.3.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.3.0/Understdy-Beta-v1.3.0.dmg"
+                sparkle:edSignature="2pm7r/8k5Kft6HbUTw382C2UXrrVPPAkLKNShij0n2ylthjfEtKAHnYsWiUS7nv2CAGnjbP3Y/to3aNdZ5NnAw=="
+                length="4609127"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.2.1</title>
             <description><![CDATA[
 <h2>What's new in v1.2.1</h2>
