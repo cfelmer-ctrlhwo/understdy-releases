@@ -5,13 +5,35 @@
         <link>https://understdy.com</link>
         <description>Latest updates for Understdy</description>
         <language>en</language>
-        <!--
-            To publish a new version:
-            1. Build the DMG: swift build -c release
-            2. Sign it: .build/artifacts/sparkle/Sparkle/bin/sign_update YourApp.dmg
-            3. Update this file with the new version, URL, signature, and length
-            4. Upload the DMG somewhere accessible (GitHub Release, S3, etc.)
-            5. Commit and push this file
-        -->
+        <item>
+            <title>Version 1.1.0</title>
+            <description><![CDATA[
+                <h2>What's New in 1.1.0</h2>
+                <ul>
+                    <li>Editable SOP titles and step annotations with tags</li>
+                    <li>Accept/decline automations with dollar ROI totals</li>
+                    <li>Corrective preview walkthrough for automations</li>
+                    <li>Time savings dashboard with visual bar</li>
+                    <li>Word document export with annotations</li>
+                    <li>Guided first value onboarding path</li>
+                    <li>"Your Day" proactive dashboard</li>
+                    <li>API cost tracking and token budgets</li>
+                    <li>Screenshot lifecycle management</li>
+                    <li>Team SOP library via shared folders</li>
+                    <li>Local AI via Ollama with machine detection</li>
+                    <li>Sparkle auto-update (future updates are automatic!)</li>
+                </ul>
+            ]]></description>
+            <pubDate>Mon, 14 Apr 2026 04:00:00 +0000</pubDate>
+            <sparkle:version>1.1.0</sparkle:version>
+            <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.1.0/Understdy-Beta-v1.1.0.dmg"
+                sparkle:edSignature="kE2nM78tcb7Za1m5zkJ6LK8NFHOowbpOluSlxFByVNWjVsp4i4A5aUqP7osJHriDmx/oU1W5GPdk/hL74e6tCA=="
+                length="3106747"
+                type="application/octet-stream"
+            />
+        </item>
     </channel>
 </rss>
