@@ -30,8 +30,8 @@
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <enclosure
                 url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.1.0/Understdy-Beta-v1.1.0.dmg"
-                sparkle:edSignature="k7FVhhIkdiR1orMr2RTG6jJ01xHvyXygP8z80apwud90ZgNdS+6oDYLlyOhoRBNf6dGS7VkVilEe9k45AbA2CQ=="
-                length="4966219"
+                sparkle:edSignature="DIzf+7C9B1QJwHz1hr+2j3dkciglrhPxIfUGBx2HrJ5kRdtMYdkTahvryQ7V7Ny8YiixMi0Dn71O2W2ATamMBA=="
+                length="5015872"
                 type="application/octet-stream"
             />
         </item>
