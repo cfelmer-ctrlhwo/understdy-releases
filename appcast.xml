@@ -6,6 +6,43 @@
         <description>Latest updates for Understdy</description>
         <language>en</language>
         <item>
+            <title>Version 1.2.0</title>
+            <description><![CDATA[
+<h2>What's new in v1.2.0</h2>
+
+<ul>
+    <li><strong>Efficiency Coach window.</strong> New <strong>Coach</strong> button in the Dashboard toolbar opens a view with your efficiency score, time-saved metrics, and live suggestions based on your work patterns.</li>
+    <li><strong>Coach is honest about what it can see.</strong> A panel at the top of the Coach window shows which detections are currently live (sessions, SOPs, calendar access) and what unlocks with more data or permissions. No more silent empty states.</li>
+    <li><strong>Calendar-aware suggestions.</strong> Once you grant calendar access, Coach can suggest meeting prep blocks and deep-work windows aligned to your actual schedule.</li>
+</ul>
+
+<h2>Fixes</h2>
+
+<ul>
+    <li><strong>Context-switching detection now handles all-day background captures correctly.</strong> Previously, 48 switches during a focused 20-minute stretch could be diluted across hours of idle time and never flagged. Coach now segments each session into active windows before evaluating switch rate.</li>
+    <li><strong>Your accept / dismiss decisions on suggestions survive re-analysis.</strong> Prior versions could wipe your status when suggestion copy changed; now each suggestion has a stable identity under the hood.</li>
+    <li><strong>Recency fix:</strong> Coach was analyzing the oldest 5 sessions instead of the newest 5 when generating suggestions and insights.</li>
+</ul>
+
+<h2>Coming soon</h2>
+
+<ul>
+    <li>Batching suggestions tuned to how you actually work, learned from your first week of capture data.</li>
+    <li>A "responsiveness mode" for users whose role requires immediate response to clients or colleagues — Coach will still suggest batching for heads-down work while respecting time you spend being responsive.</li>
+</ul>
+            ]]></description>
+            <pubDate>Tue, 14 Apr 2026 14:46:52 +0000</pubDate>
+            <sparkle:version>1.2.0</sparkle:version>
+            <sparkle:shortVersionString>1.2.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.2.0/Understdy-Beta-v1.2.0.dmg"
+                sparkle:edSignature="caSIqQ7JEN20T0BWFmPLZO+JUdxVpfGgBTDzUwBB7RqljO57fZ/wvgz5nC/7IdlkvgTiiwhFkYFsYEEqBw+HDg=="
+                length="4435169"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.1.0</title>
             <description><![CDATA[
                 <h2>What's New in 1.1.0</h2>
