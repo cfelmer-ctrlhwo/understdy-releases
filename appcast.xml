@@ -6,6 +6,53 @@
         <description>Latest updates for Understdy</description>
         <language>en</language>
         <item>
+            <title>Version 1.4.0</title>
+            <description><![CDATA[
+<h2>What's new in v1.4.0</h2>
+
+<h3>Run Now — Understdy is now a task runner</h3>
+
+Understdy used to <strong>generate</strong> automation scripts. As of v1.4 it also <strong>executes</strong> them — one click and your deployed automation runs against the live environment.
+
+<ul>
+    <li><strong>"Run Now" button on every deployed automation</strong>, both in the SOP detail card and in the Deployments sidebar. Local scripts (Python, AppleScript, shell) execute through the existing engine; cloud-service automations (Zapier, Make, n8n) POST to a webhook URL you configure once and re-use forever. Result lands as a top-right toast notification — green for success, red for failure with the error message and a "Show more" expander for the full stderr dump.</li>
+    <li><strong>`understdy://run/&lt;deployment-id&gt;` URL scheme</strong> for triggering a run from anywhere — macOS Shortcuts, Raycast, hotkey utilities, Focus Mode rules, Siri. Get the deployment ID from the sidebar (right-click → Copy ID) and you can wire any external trigger to fire your automation.</li>
+    <li><strong>Three safety rails</strong> so Run Now never surprises you. <em>Preview</em> shows the exact script before execution. <em>Dry Run</em> runs a parse-only syntax check (py_compile / osacompile / bash -n) and reports line numbers for any syntax error. <em>First-Run Confirmation</em> asks once before the first manual run of any specific automation, with a "Don't ask again for this automation" checkbox if you'd rather opt out per-deployment.</li>
+    <li><strong>Configure Webhook sheet</strong> for Zapier/Make/n8n deployments. Paste the webhook URL the workflow gives you, click Test Connection to fire a small JSON ping (so you can confirm your Zap/Scenario/Workflow actually receives requests before wiring Run Now), Save. The button on the deployment row swaps from orange "Configure Webhook" to green "Run Now" as soon as a valid `https://` URL is in place.</li>
+</ul>
+
+<h3>Under the hood</h3>
+
+<ul>
+    <li><strong>Native macOS notifications</strong> — Run Now results post through `UNUserNotificationCenter`, the same system that delivers Calendar reminders and iMessage banners. Visible from anywhere (menubar Run Now, URL scheme trigger, dashboard click), persist in Notification Center for history, respect Do Not Disturb. First Run Now after install prompts for notification permission once. Dashboard window still shows the same toast inline as a bonus when it's open.</li>
+    <li><strong>Immediate "Running…" feedback</strong> — clicking Run Now posts a "Running…" notification at click time, replaced by the success/failure result when the script finishes. No more 8-60 seconds of silence after clicking.</li>
+    <li><strong>Run Now is non-blocking</strong> — `Process` execution runs on a detached background task instead of the main actor. No more beach ball during Run Now (was a pre-existing issue, biting hard now that Run Now is a real surface).</li>
+    <li><strong>Menubar dropdown shows Deployed Automations</strong> — quick-run section above Recent SOPs, one click to fire any deployment. Status dot + filename + green play-circle. Cloud automations show an orange link icon when their webhook URL isn't set (opens dashboard to configure).</li>
+    <li><strong>Menubar header shows app version</strong> — small `v1.4.0` label next to the title so you know which build is running at a glance.</li>
+    <li><strong>Webhook payload carries SOP context</strong> — `deploymentId`, `sopId`, `sopTitle`, `automationDescription`, `triggeredAt` (ISO 8601), and `userHourlyRate`. Workflows can branch on which SOP triggered them or route by ROI.</li>
+    <li><strong>Backward-compatible deployment storage</strong> — old deployment JSON files (no `webhookURL` field) decode cleanly. Nothing to migrate.</li>
+</ul>
+
+<h3>Coming next</h3>
+
+<ul>
+    <li><strong>"Regenerate with my feedback" button</strong> — your tags, notes, and "not part of SOP" / "out of order" annotations from the SOP review get fed into the next Claude pass instead of sitting there.</li>
+    <li><strong>Email integration v2</strong> — account-level privacy controls, Apple Mail + Gmail support, corporate-Workspace-safe path that doesn't trigger admin audits.</li>
+    <li><strong>Annotations ingestion</strong> — SOP-level comments and per-step notes flow into the model context on the next regenerate.</li>
+</ul>
+            ]]></description>
+            <pubDate>Wed, 15 Apr 2026 13:19:10 +0000</pubDate>
+            <sparkle:version>1.4.0</sparkle:version>
+            <sparkle:shortVersionString>1.4.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.4.0/Understdy-Beta-v1.4.0.dmg"
+                sparkle:edSignature="11FzubW44sPoF6PkOB4P0ZP+IMtMr0YK6bUBPHpU5wEn7jJpAqtMAQurcYCLh4E1EIb7lWIlG5diB8Jl7XgYAg=="
+                length="4987238"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.3.0</title>
             <description><![CDATA[
 <h2>What's new in v1.3.0</h2>
