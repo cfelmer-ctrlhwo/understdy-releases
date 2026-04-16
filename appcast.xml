@@ -6,6 +6,68 @@
         <description>Latest updates for Understdy</description>
         <language>en</language>
         <item>
+            <title>Version 1.5.0</title>
+            <description><![CDATA[
+<h2>What's new in v1.5.0</h2>
+
+Ghost Mode Week 2 foundation — mostly invisible plumbing that makes the app significantly smarter about your workflows over time. One new on-screen prompt.
+
+<h3>"I'm stuck on this workflow" prompt</h3>
+
+After a capture session, if Understdy's prediction accuracy on a pattern has been flat-stuck below 85% for the last 10+ samples, the post-session sheet now asks:
+
+
+Two buttons: <strong>Not stuck — keep watching</strong> (dismiss) or <strong>Fix a step</strong> (opens the correction editor pointed at the specific step). You'll only see this when the ghost actually needs help — there's a 24-hour cooldown per pattern so it won't spam you on the same stuck workflow every session.
+
+<h3>Always-on workflow observation</h3>
+
+Understdy now watches which app is in focus, which window you're on, and what URL your browser is showing <strong>all day</strong> — not only during an explicit Start Capture session. This runs in the background on the same Accessibility permission you already granted. Nothing new to approve.
+
+<ul>
+    <li>~0.1% CPU idle, briefly higher during heavy app-switching bursts</li>
+    <li>14 days of rolling history kept locally in `~/Library/Application Support/Understdy/ax-stream/`, then auto-pruned</li>
+    <li>Nothing leaves your Mac</li>
+</ul>
+
+This is the foundation for next release's automatic workflow detection (Understdy noticing repeat workflows you never explicitly captured).
+
+<h3>Faster ghost narration</h3>
+
+Most screenshot analysis now runs through Apple's on-device text recognition (~200 ms) instead of the local AI model (~20 s). The AI model is still used for frames the fast tier can't resolve cleanly. You'll notice less fan activity during captures and the pattern-recognition indicator in the menubar updating sooner.
+
+<h3>Better correction UX</h3>
+
+The correction editor now shows a step picker — previously corrections silently applied to the wrong step (the draft-row order, not the step you meant). If you've typed corrections in prior versions and the pattern didn't improve, that's why.
+
+<h2>Under the hood</h2>
+
+Week 2 added three permanent data capture streams that will keep improving prediction accuracy with zero action from you:
+
+<ul>
+    <li><strong>Takeover gate decisions</strong> — every session-end records whether each known pattern has crossed the threshold where Understdy is confident enough to offer automation. History tells us which patterns are close to ready and which are permanently stuck.</li>
+    <li><strong>Feedback events</strong> — every confirm/correct/reclassify/dismiss is labeled training data for future reward-model work.</li>
+    <li><strong>Per-prediction alternatives</strong> — each prediction now carries its top-2 runner-up candidates with raw confidence scores, so we can learn from "close but wrong."</li>
+</ul>
+
+<h2>Coming next</h2>
+
+<ul>
+    <li><strong>Takeover offer sheet</strong> — the UI that surfaces "Want me to try this workflow for you?" when a pattern crosses the gate. Data capture for this has been live since this release; offer + execution is next.</li>
+    <li><strong>Automatic workflow labeling</strong> — naming recurring workflows Understdy noticed without you hitting Start Capture.</li>
+</ul>
+            ]]></description>
+            <pubDate>Thu, 16 Apr 2026 19:54:46 +0000</pubDate>
+            <sparkle:version>1.5.0</sparkle:version>
+            <sparkle:shortVersionString>1.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>13.0.0</sparkle:minimumSystemVersion>
+            <enclosure
+                url="https://github.com/cfelmer-ctrlhwo/understdy-releases/releases/download/v1.5.0/Understdy-Beta-v1.5.0.dmg"
+                sparkle:edSignature="nf3tEEISKAHm410jVp3esmKlaHlWTREFkszxpj4/UoWD0mZPcmrV9Gtw9G8uLMYZuQYfRfIB4k77i6YfLJujCQ=="
+                length="6274268"
+                type="application/octet-stream"
+            />
+        </item>
+        <item>
             <title>Version 1.4.1</title>
             <description><![CDATA[
 <h2>What's new in v1.4.1</h2>
